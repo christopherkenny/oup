@@ -1,0 +1,28 @@
+\documentclass[
+$for(babel-otherlangs)$
+  $babel-otherlangs$,
+$endfor$
+$if(babel-lang)$
+  $babel-lang$,
+$endif$
+$if(fontsize)$
+  $fontsize$,
+$endif$
+unnumsec,webpdf,
+$if(layout)$
+$layout$,
+$else$
+contemporary,
+$endif$
+$if(papersize)$
+  $papersize$,
+$else$
+large,
+$endif$
+$if(namedate)$
+  namedate
+$endif$
+$for(classoption)$
+  $classoption$$sep$,
+$endfor$
+]{oup-authoring-template}

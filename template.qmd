@@ -1,0 +1,59 @@
+---
+title: Oxford University Press Quarto Template
+format:
+  oup-pdf:
+    keep-tex: true  
+  oup-html: default
+author:
+  - name: Sarah Malloc
+    affiliations:
+      - name: An Organization
+        id: 1
+        department: The Department
+        address: 1 Main St
+        city: Boston
+        country: USA
+        postal-code: 02210-1022
+      - name: A second affilication
+        id: 2
+    orcid: 0000-0000-0000-0000
+    email: sm@example.org
+    url: https://example.org/
+  - name: Eliza Dealloc
+    affiliations:
+      - name: Another Affiliation
+        id: 3
+running-author: Malloc and Dealloc
+running-title: OUP Quarto
+journal:
+  title: "Journal Title Here"
+  doi: "DOI HERE"
+  copyright-year: 2022
+  publication-year: 2019
+  advance-access: "Day Month Year"
+  paper-type: "Subject Section"
+  first-page: 1
+  received-date: 2025-06-23
+  revised-date: 2025-10-10
+  accepted-date: 2025-12-15
+  code-blocks: false
+abstract: |
+  This document is a template demonstrating the Oup format.
+keywords: [template, demo]
+bibliography: bibliography.bib
+---
+
+## Introduction {#sec-intro}
+
+Thank you for using this Quarto template to write your article. 
+This Quarto template is unofficial and based on Overleaf's `oup` template. 
+Your introduction goes here! 
+Some examples of commonly used commands and features are listed below, to help you get started.
+
+Since we are in Quarto, you can cite with an `@` symbol, like @king1994designing.
+As seen below, you can mix markdown and Latex with each other, though it's likely best to mostly use markdown.
+
+Use section (`#`) and subsection (`##`) commands to organize your document.
+LaTeX and Quarto handle all the formatting and numbering automatically.
+Use the `@` commands for cross-references (not just cites).
+

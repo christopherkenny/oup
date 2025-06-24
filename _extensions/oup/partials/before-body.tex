@@ -1,0 +1,66 @@
+
+$if(journal.title)$\journaltitle{$journal.title$}$endif$
+$if(journal.doi)$\DOI{$journal.doi$}$endif$
+$if(journal.copyright-year)$\copyrightyear{$journal.copyright-year$}$endif$
+$if(journal.publication-year)$\pubyear{$journal.publication-year$}$endif$
+$if(journal.advance-access)$\access{Advance Access Publication Date: $journal.advance-access$}$endif$
+$if(journal.paper-type)$\appnotes{$journal.paper-type$}$endif$
+
+$if(journal.first-page)$\firstpage{$journal.first-page$}$endif$
+
+$if(subtitle)$\subtitle{$subtitle$}$endif$
+
+$if(title)$
+$if(running-title)$
+\title[$running-title$]{$title$}
+$else$
+\title[$title$]{$title$}
+$endif$
+$endif$
+
+$if(running-author)$
+\authormark{$running-author$}
+$endif$
+
+$for(by-author)$
+\author[$if(by-author.affiliations)$$for(by-author.affiliations)$$it.id$$sep$,$endfor$$endif$%
+$if(by-author.attributes.corresponding)$,%
+$$\ast$$%
+$endif$%
+]{$by-author.name.literal$ $if(by-author.orcid)$\ORCID{$by-author.orcid$}$endif$}
+$endfor$
+
+$for(by-affiliation)$
+\address[$it.id$]{$_affiliation.tex()$}
+$endfor$
+
+$for(by-author)$
+$if(by-author.attributes.corresponding)$
+\corresp[$$\ast$$]{Corresponding author. \href{email:$by-author.email$}{$by-author.email$}}
+$endif$
+$endfor$
+
+% Dates
+$if(journal.received-date)$
+%\received{$journal.received-date$}
+$endif$
+$if(journal.revised-date)$
+%\revised{$journal.revised-date$}
+$endif$
+$if(journal.accepted-date)$
+%\accepted{$journal.accepted-date$}
+$endif$
+
+$if(abstract)$
+\abstract{$abstract$}
+$endif$
+
+$if(keywords)$
+\keywords{$for(keywords)$$keywords$$sep$, $endfor$}
+$endif$
+
+$if(title)$
+\maketitle
+$endif$
+
+
