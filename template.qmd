@@ -81,7 +81,6 @@ Quarto formats citations and references automatically using the bibliography rec
 For a citation in parentheses use [@greenwade93]. 
 Multiple citations can be given as [@greenwade93;@knuth1984texbook]. 
 
-
 # Tables and Figures
 
 To include figures, you can use Quarto syntax.
