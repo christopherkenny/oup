@@ -41,20 +41,22 @@ $endif$
 $endfor$
 
 % Dates
-$if(journal.received-date)$
-%\received{$journal.received-date$}
+$if(journal.received-date.day)$
+\received{$journal.received-date.day$}{$journal.received-date.month$}{$journal.received-date.year$}
 $endif$
-$if(journal.revised-date)$
-%\revised{$journal.revised-date$}
+$if(journal.revised-date.day)$
+\revised{$journal.revised-date.day$}{$journal.revised-date.month$}{$journal.revised-date.year$}
 $endif$
-$if(journal.accepted-date)$
-%\accepted{$journal.accepted-date$}
+$if(journal.accepted-date.day)$
+\accepted{$journal.accepted-date.day$}{$journal.accepted-date.month$}{$journal.accepted-date.year$}
 $endif$
 
+%abstract
 $if(abstract)$
 \abstract{$abstract$}
 $endif$
 
+%keywords
 $if(keywords)$
 \keywords{$for(keywords)$$keywords$$sep$, $endfor$}
 $endif$

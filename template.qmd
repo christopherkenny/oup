@@ -2,7 +2,7 @@
 title: Oxford University Press Quarto Template
 format:
   oup-pdf:
-    keep-tex: true  
+    keep-tex: true
   oup-html: default
 author:
   - name: Sarah Malloc
@@ -33,12 +33,13 @@ journal:
   advance-access: "Day Month Year"
   paper-type: "Subject Section"
   first-page: 1
-  received-date: 2025-06-23
-  revised-date: 2025-10-10
-  accepted-date: 2025-12-15
-  code-blocks: false
+  received-date: 
+    year: 2025
+    month: 06
+    day: 23
 abstract: |
-  This document is a template demonstrating the Oup format.
+  This document is a template demonstrating the `oup` format for submissions to
+  Oxford University Press journals.
 keywords: [template, demo]
 bibliography: bibliography.bib
 ---
@@ -50,10 +51,89 @@ This Quarto template is unofficial and based on Overleaf's `oup` template.
 Your introduction goes here! 
 Some examples of commonly used commands and features are listed below, to help you get started.
 
-Since we are in Quarto, you can cite with an `@` symbol, like @king1994designing.
+Since we are in Quarto, you can cite with an `@` symbol, like @knuth1984texbook.
 As seen below, you can mix markdown and Latex with each other, though it's likely best to mostly use markdown.
 
 Use section (`#`) and subsection (`##`) commands to organize your document.
 LaTeX and Quarto handle all the formatting and numbering automatically.
 Use the `@` commands for cross-references (not just cites).
 
+# Using this template {#sec-template}
+
+This Quarto template is unofficial and built out of Springer Nature's template. 
+Some examples of commonly used commands and features are listed below, to help you get started.
+
+You can mix Quarto's markdown syntax and Latex with each other, though it's likely best to mostly use markdown.
+
+Major features are illustrated below:
+
+## Cross Referencing
+
+To reference a figure with example label "plot" (@fig-1), use `@fig-plotlabel`. 
+Analogously, to reference a table with example label "data", use `@tbl-data`.
+To reference a section, such as the Introduction (@sec-intro), use `@sec-intro`.
+
+For complete information on cross referencing with Quarto, see <https://quarto.org/docs/authoring/cross-references.html>.
+
+## Citations
+
+Quarto formats citations and references automatically using the bibliography records in your .bib file. 
+For a citation in parentheses use [@greenwade93]. 
+Multiple citations can be given as [@greenwade93;@knuth1984texbook]. 
+
+
+# Tables and Figures
+
+To include figures, you can use Quarto syntax.
+
+
+# Including Lists
+
+- Item 1
+- Item 2
+- Item 3
+  - a
+
+# Including Tables
+
+| month      | count |
+| ---------- | ----- |
+| 2024-01-01 | 11159 |
+| 2024-02-01 |  6460 |
+| 2024-03-01 |  8850 |
+| 2024-04-01 |  8471 |
+| 2024-05-01 |  8681 |
+| 2024-06-01 |  7710 |
+
+: Some monthly numbers {#tbl-simple}
+
+# Including code
+
+```{r}
+#| label: fig-sepal
+#| fig-cap: "According to ChatGPT, the Iris data set is a well-known dataset in the field of machine learning and statistics, often used for benchmarking algorithms. It consists of 150 observations of iris flowers from three species: Iris setosa, Iris versicolor, and Iris virginica. Each observation includes four features: sepal length, sepal width, petal length, and petal width, all measured in centimeters. This dataset is particularly useful for classification tasks as the species are distinct and easily separable based on the given measurements. In R, the dataset can be accessed using the datasets package with the command data(iris)."
+plot(iris$Sepal.Length, iris$Sepal.Width)
+```
+
+## Subfigures
+
+Figures can be placed using LaTeX or using [Quarto's figure syntax](https://quarto.org/docs/authoring/figures.html).
+Note that the `.cls` file for the `oup` format does not support subfigures, so you cannot use the `subfigure` package.
+To make a figure, try:
+
+![Caption for the figure 1.]({{< placeholder 100 100 format=png >}}){#fig-1}
+
+
+# Math works
+
+You can use LaTeX math in Quarto documents, like so:
+
+$$ 3 + 3 \cdot \epsilon $$
+
+### References
+
+Reference are automatically placed at the end of the document.
+To control placement elsewhere, use the `refs` div:
+
+::: {#refs}
+:::
