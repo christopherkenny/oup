@@ -60,7 +60,7 @@ Use the `@` commands for cross-references (not just cites).
 
 # Using this template {#sec-template}
 
-This Quarto template is unofficial and built out of Springer Nature's template. 
+This Quarto template is unofficial and built out of Oxford University Press's LaTeX template. 
 Some examples of commonly used commands and features are listed below, to help you get started.
 
 You can mix Quarto's markdown syntax and Latex with each other, though it's likely best to mostly use markdown.
